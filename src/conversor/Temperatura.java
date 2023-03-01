@@ -1,4 +1,6 @@
 package conversor;
 
-public class Temperatura {
+import sistema.interno.SistemaInterno;
+
+public class Temperatura extends SistemaInterno {
 }

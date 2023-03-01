@@ -1,4 +1,7 @@
 package conversor;
 
-public class Monedas {
+import sistema.interno.SistemaInterno;
+
+public class Monedas extends SistemaInterno {
+    private int dolar;
 }
