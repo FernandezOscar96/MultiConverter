@@ -20,6 +20,18 @@ public class Datos extends Convertir {
 			ConvertirMonedaEuro(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
+		case "peso - libra":
+			ConvertirMonedalibra(cantidad = Double
+					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			break;
+		case "peso - yen":
+			ConvertirMonedayen(cantidad = Double
+					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			break;
+		case "peso - won":
+			ConvertirMonedawon(cantidad = Double
+					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			break;
 		case "dolar - peso":
 			ConvertirMonedaPesoD(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
