@@ -14,10 +14,11 @@ public class main {
 					new Object[] { "conversor de monedas", "conversor de temperatura" }, "seleccion"));
 			switch (opciones) {
 			case "conversor de monedas":
-				String input = (String) (JOptionPane.showInputDialog(
-						null, "seleccione a que tipo de moneda desea convertir: ", "monedas",
-						JOptionPane.QUESTION_MESSAGE, null, new Object[] { "peso - dolar", "peso - euro",
-								"dolar - peso", "euro - peso", "peso - libra", "peso - yen", "peso - won" },
+				String input = (String) (JOptionPane.showInputDialog(null,
+						"seleccione a que tipo de moneda desea convertir: ", "monedas", JOptionPane.QUESTION_MESSAGE,
+						null,
+						new Object[] { "peso - dolar", "peso - euro", "peso - libra", "peso - yen", "peso - won",
+								"dolar - peso", "euro - peso", "libra - peso", "yuan - peso", "won - peso" },
 						"seleccion"));
 				datos.setSeleccion(input);
 				break;
