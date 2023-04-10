@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class main{
+public class main {
 
 	public static void main(String[] args) {
 
@@ -16,13 +16,15 @@ public class main{
 			case "conversor de monedas":
 				String input = (String) (JOptionPane.showInputDialog(null,
 						"seleccione a que tipo de moneda desea convertir: ", "monedas", JOptionPane.QUESTION_MESSAGE,
-						null, new Object[] { "peso - dolar", "peso - euro" }, "seleccion"));
+						null, new Object[] { "peso - dolar", "peso - euro", "dolar - peso", "euro - peso" },
+						"seleccion"));
 				datos.setSeleccion(input);
 				break;
 			case "conversor de temperatura":
-				String input2 =	(String) (JOptionPane.showInputDialog(null,
-						"seleccione a que tipo desea convertir: ", "temperatura", JOptionPane.QUESTION_MESSAGE,
-						null, new Object[] { "Fahrenheit a Celsius", "Celsius a Fahrenheit" }, "seleccion"));
+				String input2 = (String) (JOptionPane.showInputDialog(null, "seleccione a que tipo desea convertir: ",
+						"temperatura", JOptionPane.QUESTION_MESSAGE, null,
+						new Object[] { "Fahrenheit a Celsius", "Celsius a Fahrenheit" }, "seleccion"));
+				datos.setSeleccion2(input2);
 				break;
 			default:
 				break;
