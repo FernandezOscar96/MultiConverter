@@ -1,10 +1,14 @@
+package com.conversor.main;
+
 import javax.swing.JOptionPane;
 
-public class main {
+import com.conversor.datos.Datos;
 
-	public static void main(String[] args) {
+public class Main {
 
-		Datos datos = new Datos();
+	public void main(String[] args) {
+
+		var datos = new Datos();
 
 		boolean flag = true;
 

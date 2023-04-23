@@ -1,9 +1,23 @@
+package com.conversor.datos;
+
 import javax.swing.JOptionPane;
 
-public class Datos extends Convertir {
+import com.conversor.conversor.ConversorMoneda;
+import com.conversor.conversor.ConversorTemp;
+
+public class Datos {
 
 	public double cantidad;
 	public String seleccion, seleccion2;
+	ConversorMoneda moneda = new ConversorMoneda();
+	ConversorTemp temperatura = new ConversorTemp();
+
+	public void Datod(double cantidad, String seleccion, String seleccion2) {
+		this.cantidad = cantidad;
+		this.seleccion = seleccion;
+		this.seleccion2 = seleccion2;
+
+	}
 
 	public void setCantidad(double cantidad) {
 		this.cantidad = cantidad;
@@ -13,43 +27,43 @@ public class Datos extends Convertir {
 		this.seleccion = seleccion;
 		switch (seleccion) {
 		case "peso - dolar":
-			ConvertirMonedaDolares(cantidad = Double
+			moneda.ConvertirDolar(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
 		case "peso - euro":
-			ConvertirMonedaEuro(cantidad = Double
+			moneda.ConvertirEuro(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
 		case "peso - libra":
-			ConvertirMonedalibra(cantidad = Double
+			moneda.Convertirlibra(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
 		case "peso - yen":
-			ConvertirMonedayen(cantidad = Double
+			moneda.ConvertirYen(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
 		case "peso - won":
-			ConvertirMonedawon(cantidad = Double
+			moneda.ConvertirWon(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
 		case "dolar - peso":
-			ConvertirMonedaPesoD(cantidad = Double
+			moneda.ConvertirPesoD(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
 		case "euro - peso":
-			ConvertirMonedaPesoE(cantidad = Double
+			moneda.ConvertirPesoE(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
 		case "libra - peso":
-			ConvertirMonedaPesoL(cantidad = Double
+			moneda.ConvertirPesoL(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
 		case "yuan - peso":
-			ConvertirMonedaPesoY(cantidad = Double
+			moneda.ConvertirPesoY(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
 		case "won - peso":
-			ConvertirMonedaPesoW(cantidad = Double
+			moneda.ConvertirPesoW(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
 			break;
 		default:
@@ -61,10 +75,10 @@ public class Datos extends Convertir {
 	public void setSeleccion2(String seleccion2) {
 		this.seleccion2 = seleccion2;
 		if (seleccion2 == "Fahrenheit a Celsius") {
-			ConvertirFaC(cantidad = Double
+			temperatura.ConvertirFaC(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese la temperatura a convertir: ", "")));
 		} else {
-			ConvertirCaF(cantidad = Double
+			temperatura.ConvertirCaF(cantidad = Double
 					.parseDouble(JOptionPane.showInputDialog(null, "ingrese la temperatura a convertir: ", "")));
 		}
 	}

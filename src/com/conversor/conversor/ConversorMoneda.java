@@ -1,73 +1,66 @@
+package com.conversor.conversor;
+
 import javax.swing.JOptionPane;
 
-public class Convertir {
+
+public class ConversorMoneda {
 //de peso a:
-	public void ConvertirMonedaDolares(double valor) {
+	public void ConvertirDolar(double valor) {
 		double monedaDolar = valor / 389;
 		monedaDolar = (double) Math.round(monedaDolar * 100d) / 100;
 		JOptionPane.showMessageDialog(null, "tienes $ " + monedaDolar + " dolares.");
 	}
 
-	public void ConvertirMonedaEuro(double valor) {
+	public void ConvertirEuro(double valor) {
 		double monedaEuro = valor / 392;
 		monedaEuro = (double) Math.round(monedaEuro * 100d) / 100;
 		JOptionPane.showMessageDialog(null, "tienes $ " + monedaEuro + " euros.");
 	}
 
-	public void ConvertirMonedalibra(double valor) {
+	public void Convertirlibra(double valor) {
 		double monedaEuro = valor / 262;
 		monedaEuro = (double) Math.round(monedaEuro * 100d) / 100;
 		JOptionPane.showMessageDialog(null, "tienes $ " + monedaEuro + " libras esterlinas.");
 	}
 
-	public void ConvertirMonedayen(double valor) {
+	public void ConvertirYen(double valor) {
 		double monedaEuro = valor / 1.58;
 		monedaEuro = (double) Math.round(monedaEuro * 100d) / 100;
 		JOptionPane.showMessageDialog(null, "tienes $ " + monedaEuro + " yenes.");
 	}
 
-	public void ConvertirMonedawon(double valor) {
+	public void ConvertirWon(double valor) {
 		double monedaEuro = valor / 0.15;
 		monedaEuro = (double) Math.round(monedaEuro * 100d) / 100;
 		JOptionPane.showMessageDialog(null, "tienes $ " + monedaEuro + " won.");
 	}
 
 // de x moneda a peso
-	public void ConvertirMonedaPesoD(double valor) {
+	public void ConvertirPesoD(double valor) {
 		double monedaPeso = valor * 389;
 		JOptionPane.showMessageDialog(null, "tienes $ " + monedaPeso + " en Pesos Argentinos.");
 	}
 
-	public void ConvertirMonedaPesoE(double valor) {
+	public void ConvertirPesoE(double valor) {
 		double monedaPeso = valor * 392;
 		JOptionPane.showMessageDialog(null, "tienes $ " + monedaPeso + " en Pesos Argentinos.");
 	}
 
-	public void ConvertirMonedaPesoL(double valor) {
+	public void ConvertirPesoL(double valor) {
 		double monedaPeso = valor * 262;
 		JOptionPane.showMessageDialog(null, "tienes $ " + monedaPeso + " en Pesos Argentinos.");
 	}
 
-	public void ConvertirMonedaPesoY(double valor) {
+	public void ConvertirPesoY(double valor) {
 		double monedaPeso = valor * 1.58;
 		JOptionPane.showMessageDialog(null, "tienes $ " + monedaPeso + " en Pesos Argentinos.");
 	}
 
-	public void ConvertirMonedaPesoW(double valor) {
+	public void ConvertirPesoW(double valor) {
 		double monedaPeso = valor * 0.15;
 		JOptionPane.showMessageDialog(null, "tienes $ " + monedaPeso + " en Pesos Argentinos.");
 	}
 
 //cambios de temperatura
-	public void ConvertirFaC(double temperatura) {
-		double celcius = (temperatura - 32) * 5 / 9;
-		JOptionPane.showMessageDialog(null,
-				"de " + temperatura + " grados fahrenheit a " + celcius + " grados celcius");
-	}
 
-	public void ConvertirCaF(double temperatura) {
-		double fahrenheit = temperatura * 9 / 5 + 32;
-		JOptionPane.showMessageDialog(null,
-				"de " + temperatura + " grados celcius a " + fahrenheit + " grados fahrenheit");
-	}
 }
