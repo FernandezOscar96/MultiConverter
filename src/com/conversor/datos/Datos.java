@@ -2,69 +2,46 @@ package com.conversor.datos;
 
 import javax.swing.JOptionPane;
 
-import com.conversor.conversor.ConversorMoneda;
-import com.conversor.conversor.ConversorTemp;
+import com.conversor.conversor.Conversor;
 
 public class Datos {
 
-	public double cantidad;
 	public String seleccion, seleccion2;
-	ConversorMoneda moneda = new ConversorMoneda();
-	ConversorTemp temperatura = new ConversorTemp();
-
-	public void Datod(double cantidad, String seleccion, String seleccion2) {
-		this.cantidad = cantidad;
-		this.seleccion = seleccion;
-		this.seleccion2 = seleccion2;
-
-	}
-
-	public void setCantidad(double cantidad) {
-		this.cantidad = cantidad;
-	}
+	Conversor trade = new Conversor();
+	Monedas moneda = new Monedas();
 
 	public void setSeleccion(String seleccion) {
 		this.seleccion = seleccion;
 		switch (seleccion) {
 		case "peso - dolar":
-			moneda.ConvertirDolar(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			trade.PesoAConvertir("dolar", moneda.getMonedas());
 			break;
 		case "peso - euro":
-			moneda.ConvertirEuro(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			trade.PesoAConvertir("euro", moneda.getMonedas());
 			break;
 		case "peso - libra":
-			moneda.Convertirlibra(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			trade.PesoAConvertir("libra", moneda.getMonedas());
 			break;
 		case "peso - yen":
-			moneda.ConvertirYen(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			trade.PesoAConvertir("yen", moneda.getMonedas());
 			break;
 		case "peso - won":
-			moneda.ConvertirWon(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			trade.PesoAConvertir("won", moneda.getMonedas());
 			break;
 		case "dolar - peso":
-			moneda.ConvertirPesoD(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			trade.ConvertirAPeso("dolar", moneda.getMonedas());
 			break;
 		case "euro - peso":
-			moneda.ConvertirPesoE(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			trade.ConvertirAPeso("euro", moneda.getMonedas());
 			break;
 		case "libra - peso":
-			moneda.ConvertirPesoL(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			trade.ConvertirAPeso("libra", moneda.getMonedas());
 			break;
 		case "yuan - peso":
-			moneda.ConvertirPesoY(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			trade.ConvertirAPeso("yuan", moneda.getMonedas());
 			break;
 		case "won - peso":
-			moneda.ConvertirPesoW(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese el monto a convertir: ", "")));
+			trade.ConvertirAPeso("won", moneda.getMonedas());
 			break;
 		default:
 			break;
@@ -75,12 +52,13 @@ public class Datos {
 	public void setSeleccion2(String seleccion2) {
 		this.seleccion2 = seleccion2;
 		if (seleccion2 == "Fahrenheit a Celsius") {
-			temperatura.ConvertirFaC(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese la temperatura a convertir: ", "")));
+			double temp = Double
+					.parseDouble(JOptionPane.showInputDialog(null, "ingrese la temperatura a convertir: ", ""));
+			trade.ConvertirFaC(temp);
 		} else {
-			temperatura.ConvertirCaF(cantidad = Double
-					.parseDouble(JOptionPane.showInputDialog(null, "ingrese la temperatura a convertir: ", "")));
+			double temp = Double
+					.parseDouble(JOptionPane.showInputDialog(null, "ingrese la temperatura a convertir: ", ""));
+			trade.ConvertirCaF(temp);
 		}
 	}
-
 }
